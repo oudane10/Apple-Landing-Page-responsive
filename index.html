@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatbile" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Apple Landing Page Responsive</title>
+
+	<!-- custom css file link  -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<section class="apple">
+		<header class="header">
+			<a href="#" class="logo"><img src="apple.png"></a>
+
+			<nav class="navbar">
+				<ul>
+					<li onclick="addClass();"><a href="#home">Home</a></li>
+					<li onclick="addClass();"><a href="#about">About</a></li>
+					<li onclick="addClass();"><a href="#products">Products</a></li>
+					<li onclick="addClass();"><a href="#new">New Arrivals</a></li>
+					<li onclick="addClass();"><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+			<div class="toggle" onclick="addClass();"></div>
+		</header>
+
+
+
+			<div class="left">
+				<h1>that's what<br> <span>i like</span> </h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+				<a href="#" class="btn">See more products</a>
+			</div>
+
+			<div class="right">
+				<img src="applesliver.png" class="active">
+			</div>
+		
+		<div class="icons">
+			<img src="faceboo.png">
+			<img src="apple.png">
+			<img src="twitte.png">
+		</div>
+
+		<div class="apple1">
+			<img src="appleblanc.png" onclick="changeIm('appleblanc.png');changeBg('#004ebd')">
+			<img src="applepurple.png" onclick="changeIm('applepurple.png');changeBg('#a926d6')">
+			<img src="applesliver.png" onclick="changeIm('applesliver.png');changeBg('#ef7d0e')">
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		function changeIm(image) {
+			document.querySelector('.active').src = image;
+		}
+
+		function changeBg(color) {
+			let section = document.querySelector('.apple');
+			section.style.background = color;
+		}
+
+		function addClass(){
+			let navbar = document.querySelector('.navbar');
+			let toggle = document.querySelector('.toggle');
+			toggle.classList.toggle('active');
+			navbar.classList.toggle('active');
+		}
+	</script>
+
+</body>
+</html>
